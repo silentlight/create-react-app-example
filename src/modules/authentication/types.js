@@ -1,0 +1,23 @@
+const LOGIN_REQUEST = 'app/authentication/LOGIN_REQUEST';
+const LOGIN_SUCCESS = 'app/authentication/LOGIN_SUCCESS';
+const LOGIN_ERROR = 'app/authentication/LOGIN_ERROR';
+
+const LOGOUT_REQUEST = 'app/authentication/LOGOUT_REQUEST';
+const LOGOUT_SUCCESS = 'app/authentication/LOGOUT_SUCCESS';
+const LOGOUT_ERROR = 'app/authentication/LOGOUT_ERROR';
+
+const VALIDATE_TOKEN_REQUEST = 'app/authentication/VALIDATE_TOKEN_REQUEST';
+const VALIDATE_TOKEN_SUCCESS = 'app/authentication/VALIDATE_TOKEN_SUCCESS';
+const VALIDATE_TOKEN_ERROR = 'app/authentication/VALIDATE_TOKEN_ERROR';
+
+export default {
+  LOGIN_REQUEST,
+  LOGIN_SUCCESS,
+  LOGIN_ERROR,
+  LOGOUT_REQUEST,
+  LOGOUT_SUCCESS,
+  LOGOUT_ERROR,
+  VALIDATE_TOKEN_REQUEST,
+  VALIDATE_TOKEN_SUCCESS,
+  VALIDATE_TOKEN_ERROR,
+}

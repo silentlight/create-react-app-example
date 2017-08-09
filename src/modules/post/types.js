@@ -1,0 +1,9 @@
+const FETCH_POSTS_REQUEST = 'app/authentication/FETCH_POSTS_REQUEST';
+const FETCH_POSTS_SUCCESS = 'app/authentication/FETCH_POSTS_SUCCESS';
+const FETCH_POSTS_ERROR = 'app/authentication/FETCH_POSTS_ERROR';
+
+export default {
+  FETCH_POSTS_REQUEST,
+  FETCH_POSTS_SUCCESS,
+  FETCH_POSTS_ERROR,
+}

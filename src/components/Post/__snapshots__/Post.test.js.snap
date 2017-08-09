@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class Post extends _react.PureComponent {
+  render() {
+    const { post } = this.props;
+
+    return (
+      _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: this },
+        _react2.default.createElement('h3', { __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: this }, post.get('title'))));
+
+
+  }} renders and matches our snapshot 1`] = `
+<div>
+  <h3>
+    Test post
+  </h3>
+</div>
+`;
