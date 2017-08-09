@@ -9,25 +9,25 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Update npm
-        command: 'sudo npm install -g npm@latest'
+          name: Update npm
+          command: 'sudo npm install -g npm@latest'
       - restore_cache:
-        key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
-        name: Install dependencies
-        command: npm install
+          name: Install dependencies
+          command: npm install
       - save_cache:
-        key: dependency-cache-{{ checksum "package.json" }}
-        paths:
-          - ./node_modules
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
       - run:
-        name: Run test
-        command: npm test -- --coverage
+          name: Run test
+          command: npm test -- --coverage
       - store_test_results:
-        path: test-reports/
+          path: test-reports/
       - run:
-        name: Build project
-        command: npm run build
+          name: Build project
+          command: npm run build
       - deploy:
-        name: Deploy to S3
-        command: npm run deploy
+          name: Deploy to S3
+          command: npm run deploy
