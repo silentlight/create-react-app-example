@@ -31,3 +31,4 @@ jobs:
       - deploy:
         name: Deploy to S3
         command: npm run deploy
+        
