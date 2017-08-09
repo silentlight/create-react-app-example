@@ -19,7 +19,7 @@ jobs:
             - ./node_modules
       - run:
           name: Run test
-          command: npm test -- --coverage
+          command: npm test -- -u --coverage
       - store_test_results:
           path: test-reports/
       - run:
