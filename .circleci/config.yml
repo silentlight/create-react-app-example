@@ -3,14 +3,14 @@ jobs:
   build:
     working_directory: ~/app
     docker:
-      - image: circleci/node:6.10
+      - image: circleci/node:7.10
         environment:
           CI: true
     steps:
       - checkout
       - run:
           name: Update npm
-          command: 'sudo npm install -g npm@4.6.1'
+          command: 'npm install -g npm@latest'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
