@@ -20,6 +20,9 @@ jobs:
       - run:
           name: Run test
           command: npm test -- -u --coverage
+      - store_artifacts:
+          path: test-reports/
+          destination: tr1
       - store_test_results:
           path: test-reports/
       - run:
