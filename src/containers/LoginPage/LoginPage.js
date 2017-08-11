@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { LoginForm } from 'components';
+import { LoginForm } from 'containers';
 
 import {
   authenticationOperations,
   authenticationSelectors,
 } from 'modules/authentication';
 
-class LoginPage extends Component {
+export class LoginPage extends Component {
 
   handleFormSubmit = (values) => {
     this.props.loginUser(values);
   }
 
   render() {
-    const { isAuthenticating } = this.props;
+    const { authenticating } = this.props;
+
     return (
       <div>
         <h1>Login Page</h1>
-        <LoginForm onFormSubmit={this.handleFormSubmit} isAuthenticating={isAuthenticating} />
+        <LoginForm onSubmit={this.handleFormSubmit} authenticating={authenticating} />
       </div>
     )
   }
@@ -27,7 +28,7 @@ class LoginPage extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    isAuthenticating: authenticationSelectors.isAuthenticating()(state),
+    authenticating: authenticationSelectors.isAuthenticating()(state),
   }
 };
 

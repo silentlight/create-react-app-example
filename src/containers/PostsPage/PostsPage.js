@@ -10,7 +10,7 @@ import {
   Post,
 } from 'components';
 
-class PostsPage extends Component {
+export class PostsPage extends Component {
   componentDidMount() {
     this.props.loadPosts();
   }

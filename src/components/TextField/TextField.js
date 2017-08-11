@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 class TextField extends PureComponent {
   render() {
-    const {input, label, type, meta: { touched, error, warning }} = this.props;
+    const { input, meta: { touched, error, warning } } = this.props;
+    const { label, type } = this.props;
 
     return (
       <div>
@@ -14,11 +15,11 @@ class TextField extends PureComponent {
           <input {...input} placeholder={label} type={type} />
           {touched &&
           ((error &&
-          <p>
+          <p className="warning">
             {error}
           </p>) ||
           (warning &&
-          <p>
+          <p className="error">
             {warning}
           </p>))}
         </div>
@@ -30,6 +31,12 @@ class TextField extends PureComponent {
 TextField.propTypes = {
   input: PropTypes.object.isRequired,
   label: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  meta: PropTypes.shape({
+    touched: PropTypes.bool,
+    error: PropTypes.string,
+    warning: PropTypes.string,
+  }),
 };
 
 TextField.defaultProps = {

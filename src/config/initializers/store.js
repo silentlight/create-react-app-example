@@ -1,27 +1,11 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, compose } from 'redux';
 import { combineReducers } from 'redux-immutable';
 import { fromJS } from 'immutable';
-import thunkMiddleware from 'redux-thunk';
-
-import configureLogger from './logger';
 
 import reducers from '../reducers';
+import enhancers from '../enhancers';
 
 export default function configureStore(initialState = {}) {
-  const middlewares = [
-    thunkMiddleware,
-  ];
-
-  const loggerMiddleware = configureLogger();
-
-  if (process.env.NODE_ENV === `development`) {
-    middlewares.push(loggerMiddleware);
-  }
-
-  const enhancers = [
-    applyMiddleware(...middlewares),
-  ];
-
   // If Redux DevTools Extension is installed use it, otherwise use Redux compose
   /* eslint-disable no-underscore-dangle */
   const composeEnhancers =

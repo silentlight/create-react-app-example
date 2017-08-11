@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField renders and matches the snapshot 1`] = `
+<div>
+  <label>
+    Test field
+  </label>
+  <div>
+    <input
+      name="Test"
+      placeholder="Test field"
+      type="text"
+    />
+  </div>
+</div>
+`;

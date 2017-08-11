@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './App.css';
 
 import { PublicLayout, AuthenticatedLayout } from 'components';
 
-class App extends Component {
+export class App extends Component {
   render() {
     const LayoutComponent = (this.props.authenticated) ? AuthenticatedLayout : PublicLayout;
 
@@ -15,5 +16,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  authenticated: PropTypes.bool,
+};
 
 export default App;

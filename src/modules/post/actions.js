@@ -1,16 +1,15 @@
 import types from './types';
 
-const fetchPostsRequest = (payload) => {
+const fetchPostsRequest = () => {
   return {
     type: types.FETCH_POSTS_REQUEST,
-    payload,
   };
 };
 
 const fetchPostsSuccess = (payload) => {
   return {
     type: types.FETCH_POSTS_SUCCESS,
-    payload: payload,
+    payload,
   };
 };
 

@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm renders and matches the snapshot 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <div>
+      <label>
+        Email
+      </label>
+      <div>
+        <input
+          name="email"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
+          placeholder="Email"
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <label>
+        Password
+      </label>
+      <div>
+        <input
+          name="password"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onDragStart={[Function]}
+          onDrop={[Function]}
+          onFocus={[Function]}
+          placeholder="Password"
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <button
+      disabled={true}
+      type="submit"
+    >
+      Submit
+    </button>
+    <button
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      Clear Values
+    </button>
+  </div>
+</form>
+`;

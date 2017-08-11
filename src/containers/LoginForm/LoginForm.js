@@ -2,27 +2,29 @@ import React, { PureComponent } from 'react';
 import { Field, reduxForm } from 'redux-form/immutable';
 import PropTypes from 'prop-types';
 
-import { required, email } from '../../utils/validations';
+import { required, email } from 'utils/validations';
 
 import { TextField } from 'components';
 
 /**
  * Simple login form
  */
-class LoginForm extends PureComponent {
+export class LoginForm extends PureComponent {
+
   render() {
-    const { onFormSubmit, isAuthenticating, handleSubmit, pristine, reset, submitting } = this.props;
+    const { submitting, pristine, reset, handleSubmit } = this.props;
+    const { authenticating } = this.props;
 
     return (
-      <form onSubmit={handleSubmit(onFormSubmit)}>
+      <form onSubmit={handleSubmit}>
 
         <div>
           <Field
             name="email"
             component={TextField}
+            validate={[required, email]}
             type="email"
             label="Email"
-            validate={[required, email]}
           />
         </div>
 
@@ -30,9 +32,9 @@ class LoginForm extends PureComponent {
           <Field
             name="password"
             component={TextField}
+            validate={required}
             type="password"
             label="Password"
-            validate={required}
           />
         </div>
 
@@ -45,8 +47,8 @@ class LoginForm extends PureComponent {
           </button>
         </div>
 
-        {isAuthenticating &&
-          <p>Authenticating user. Please wait...</p>
+        {authenticating &&
+        <p>Authenticating user. Please wait...</p>
         }
 
       </form>
@@ -56,9 +58,9 @@ class LoginForm extends PureComponent {
 
 LoginForm.propTypes = {
   /** Callback to be run when form submits */
-  onFormSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
   /** Indicator if form is authenticating */
-  isAuthenticating: PropTypes.bool,
+  authenticating: PropTypes.bool,
 };
 
 export default reduxForm({

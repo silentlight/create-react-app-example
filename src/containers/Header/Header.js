@@ -11,7 +11,7 @@ import {
 
 import './Header.css';
 
-class Header extends PureComponent {
+export class Header extends PureComponent {
 
   handleClick = () => {
     this.props.logout();

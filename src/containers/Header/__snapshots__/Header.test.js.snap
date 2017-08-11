@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders and matches the snapshot 1`] = `
+<ul
+  className="Header"
+>
+  <li>
+    <a
+      className="NavLink"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Dashboard
+    </a>
+  </li>
+  <li>
+    <a
+      className="NavLink"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Posts
+    </a>
+  </li>
+  <li>
+    <a
+      className="NavLink"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Logout
+    </a>
+  </li>
+</ul>
+`;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class NotAuthorizedPage extends Component {
+export class NotAuthorizedPage extends Component {
   render() {
     return (
       <div>

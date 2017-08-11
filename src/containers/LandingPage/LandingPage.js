@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-class LandingPage extends Component {
+export class LandingPage extends Component {
 
   render() {
     return (

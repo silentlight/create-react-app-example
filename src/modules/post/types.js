@@ -1,6 +1,6 @@
-const FETCH_POSTS_REQUEST = 'app/authentication/FETCH_POSTS_REQUEST';
-const FETCH_POSTS_SUCCESS = 'app/authentication/FETCH_POSTS_SUCCESS';
-const FETCH_POSTS_ERROR = 'app/authentication/FETCH_POSTS_ERROR';
+const FETCH_POSTS_REQUEST = 'app/post/FETCH_POSTS_REQUEST';
+const FETCH_POSTS_SUCCESS = 'app/post/FETCH_POSTS_SUCCESS';
+const FETCH_POSTS_ERROR = 'app/post/FETCH_POSTS_ERROR';
 
 export default {
   FETCH_POSTS_REQUEST,

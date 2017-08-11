@@ -9,17 +9,12 @@ const post = fromJS({
   title: "Test post",
 });
 
-describe(Post, () => {
+describe('Post', () => {
 
-  const component = shallow(
-    <Post post={post}/>
-  );
+  const component = shallow(<Post post={post}/>);
 
-  it('renders and matches our snapshot', () => {
-    const component = renderer.create(
-      <Post post={post} />
-    );
-    const tree = component.toJSON();
+  it('renders and matches the snapshot', () => {
+    const tree = renderer.create(<Post post={post} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
