@@ -36,6 +36,7 @@
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "redux-devtools": "^3.4.0",
+    "redux-mock-store": "^1.2.3",
     "s3-website": "^3.1.0"
   }
 }
